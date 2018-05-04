@@ -1,6 +1,6 @@
 <template>
 <div class="box">
-    <h3 class="title">App: {{ movieId }}</h3>
+    <h3 class="title">Title: {{ movieId }}</h3>
     <p>Count: {{ status.count }}, Price: {{ status.price }}</p>
     <movie @chooseMovie="handleChooseMovie" :movieId="movieId"></movie>
     <seat 
@@ -54,7 +54,7 @@ export default {
             this.movieId = movieId
 
             const movieRef = db.ref('/').child(this.movieId)
-            movieRef.on('value', snapshost => {
+            movieRef.on('value', snapshot => {
                 console.log(snapshot.val())
                 const seats = snapshot.val()
 
