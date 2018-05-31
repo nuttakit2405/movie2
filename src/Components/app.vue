@@ -21,7 +21,7 @@ import Seat from 'Components/seat.vue'
 import { pushToArray } from 'other/lib'
 
 const config = {
-    databaseURL: "https://movie-firebase.firebaseio.com"  
+    databaseURL: "https://vue-firebase-c852a.firebaseio.com"  
 }
 
 firebase.initializeApp(config)
